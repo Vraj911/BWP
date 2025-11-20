@@ -16,7 +16,7 @@ import { ToastContainer } from 'react-toastify';
 import ChangeUsername from './Pages/ChangeUsername';
 import Notifications from './Pages/Notifications';
 import Notes from './Pages/Notes';
-
+import LandingPage from './Pages/Landing';
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -46,22 +46,26 @@ function App() {
       <div className={`flex h-screen ${user ? 'pt-20' : ''}  bg-background`}>
         {user &&sidebar&& <Sidebar setSidebar={setSidebar}/>}
         <div className={`${user&&sidebar?'ml-[11%]':''} overflow-y-hidden w-full `} onClick={closeSidebar}>
-          <Routes>
-            {/* ✅ PROTECTED HOME ROUTE */}
-            <Route path="/" element={user ? <Home /> : <Navigate to="/signup" />} />
-            {/* ✅ OPEN ROUTES */}
-            <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
-            <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" />} />
-            {/* ✅ PROTECTED ROUTES */}
-            <Route path="/posts" element={user ? <PostCard /> : <Navigate to="/signup" />} />
-            <Route path="/activity" element={user ? <Activity /> : <Navigate to="/signup" />} />
-            <Route path="/account" element={user ? <Account /> : <Navigate to="/signup" />} />
-            <Route path="/create" element={user ? <CreatePost /> : <Navigate to="/signup" />} />
-             <Route path="/rules" element={user ? <Rules /> : <Navigate to="/signup" />} />
-             <Route path="/change-username" element={user ? <ChangeUsername /> : <Navigate to="/signup" />}/>
-              <Route path="/notifications" element={user ? <Notifications /> : <Navigate to="/signup" />} />
-              <Route path="/notes" element={user ? <Notes /> : <Navigate to="/signup" />} /> 
-          </Routes>
+         <Routes>
+  {/* PUBLIC */}
+<Route path="/" element={!user ? <LandingPage /> : <Navigate to="/home" />} />
+
+  {/* AUTH PAGES */}
+  <Route path="/login" element={!user ? <Login /> : <Navigate to="/home" />} />
+  <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/home" />} />
+
+  {/* PROTECTED */}
+  <Route path="/home" element={user ? <Home /> : <Navigate to="/login" />} />
+  <Route path="/posts" element={user ? <PostCard /> : <Navigate to="/login" />} />
+  <Route path="/activity" element={user ? <Activity /> : <Navigate to="/login" />} />
+  <Route path="/account" element={user ? <Account /> : <Navigate to="/login" />} />
+  <Route path="/create" element={user ? <CreatePost /> : <Navigate to="/login" />} />
+  <Route path="/rules" element={user ? <Rules /> : <Navigate to="/login" />} />
+  <Route path="/change-username" element={user ? <ChangeUsername /> : <Navigate to="/login" />} />
+  <Route path="/notifications" element={user ? <Notifications /> : <Navigate to="/login" />} />
+  <Route path="/notes" element={user ? <Notes /> : <Navigate to="/login" />} />
+</Routes>
+
         </div>
       </div>
     </Router>
