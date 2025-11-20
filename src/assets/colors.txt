@@ -1,0 +1,13 @@
+@theme {
+  --color-background: #333333;        /* Charcoal - Main background */
+  --color-surface: #2A2A2A;           /* Gunmetal - Post and comment containers */
+  --color-text-primary: #F5F5F5;      /* White Smoke - Main text */
+  --color-text-secondary: #AAAAAA;    /* Cool Gray - Metadata, timestamps */
+  --color-accent-blue: #4DA8DA;       /* Sky Blue - Links, active UI elements */
+  --color-accent-green: #3CB371;      /* Mint Green - Upvotes, badges */
+  --color-accent-red: #DC143C;        /* Crimson - Downvotes, errors */
+  --color-border: #444444;  
+    --color-header: #1E1E1E; /* Darker charcoal - for header/navbars */
+      --color-sidebar: #2E2E2E; /* Slightly lighter than background, distinct from posts */
+
+}

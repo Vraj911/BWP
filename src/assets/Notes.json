@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Computer Science Tools",
+        "description": "A curated collection of CS-focused learning products, covering everything from first-year foundations to advanced project resources."
+    },
+    {
+        "name": "Mechanical Engineering Tools",
+        "description": "A bundle of mechanical-engineering learning aids, guides, and tools designed to help users explore concepts and build practical skills."
+    },
+    {
+        "name": "Electrical Engineering Tools",
+        "description": "A set of electrical-engineering resources, circuit helpers, and structured material for anyone exploring the field."
+    },
+    {
+        "name": "Textile Engineering Suite",
+        "description": "A neatly organized set of textile-engineering study and project tools, offering multi-semester guidance and practical insights."
+    },
+    {
+        "name": "Civil Engineering Tools",
+        "description": "A collection of civil-engineering learning products with structured information for design, surveying, and construction concepts."
+    }
+]

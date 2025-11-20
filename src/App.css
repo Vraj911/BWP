@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+@theme {
+  --font-primary:"Montserrat", "sans-serif";
+  --font-secondary: "Patrick Hand", "cursive";
+  --color-background: #1F1F1F;        /* Deep Charcoal - Main background */
+  --color-surface: #2C2C2E;           /* Slate Gray - Post and comment containers */
+  --color-text-primary: #E0E0E0;      /* Soft White - Main text */
+  --color-text-secondary: #A0A0A0;    /* Dusty Gray - Metadata, timestamps */
+  --color-accent-blue: #A78BFA;       /* Muted Lavender - Links, active UI elements */
+  --color-accent-green: #6FBF73;      /* Soft Green - Upvotes, badges */
+  --color-accent-red: #F4B860;        /* Warm Amber - Downvotes, gentle alerts */
+  --color-border: #3A3A3C;            /* Deep Gray - Subtle borders */
+  --color-header: #181818;            /* Nearly Black - Header/navbars */
+  --color-sidebar: #252526;           /* Dim Charcoal - Sidebar area */
+  
+}
