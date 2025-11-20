@@ -8,7 +8,7 @@ function Header({setSidebar}) {
   
   const [emoji,setemoji]=useState('🌸');
   const[notifications,setNotifications]=useState(false);
-  let array=['🌸','💄','🫦','💀','🗿','💔','👀','😋','😍','😎','🔥','🫣','💦'];
+  let array=[];
   const initNoti = async ()=>{
     const email = auth.currentUser.email;
   const seen = await hasSeenGeneralNotifications(email);
